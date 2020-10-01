@@ -1,8 +1,6 @@
 <ul>
   <li *ngFor="let product of products">
-    <div class="col-sm-5">
-      <span class="track-time">{{product.albumName}}</span>
-    </div>
+    <a routerLink="/product/{{product.id}}" routerLinkActive="active">{{product.albumName}}</a>
   </li>
 </ul>
 

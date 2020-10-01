@@ -11,20 +11,11 @@ import { ProductService } from './product.service';
 import { ProductTracklistingComponent } from './product-tracklisting/product-tracklisting.component';
 import { ProductListComponent } from './product-list/product-list.component';
 
-const appRoutes: Routes = [];
-
-let productsrt:any = {
-  path: 'products',
-  component: 'ProductListComponent'
-};
-
-let productrt: any = {
-  path: 'product/:id',
-  component: 'ProductPageComponent'
-}
-
-appRoutes.push(productsrt);
-appRoutes.push(productrt);
+const appRoutes: Routes = [
+  { path: 'products', component: ProductListComponent },
+  { path: 'product/:id', component: ProductPageComponent },
+  { path: '', redirectTo: 'products', pathMatch: 'full' }
+];
 
 @NgModule({
   declarations: [
